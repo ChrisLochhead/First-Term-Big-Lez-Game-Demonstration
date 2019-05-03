@@ -97,11 +97,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\Dependencies\freetype\include;$(ProjectDir)\Dependencies\irrKlang-1.6.0\include;$(ProjectDir)\Dependencies\SDL2-2.0.8\SDL2;$(ProjectDir)\Dependencies\SOIL2\include;$(ProjectDir)\Dependencies\Assimp\include;$(ProjectDir)\Dependencies\glew-2.1.0\include;$(ProjectDir)\Dependencies\glm;$(ProjectDir)\Dependencies\glfw-3.2.1.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Dependencies\irrKlang-1.6.0\include;$(ProjectDir)\Dependencies\SDL2-2.0.8\SDL2;$(ProjectDir)\Dependencies\SOIL2\include;$(ProjectDir)\Dependencies\Assimp\include;$(ProjectDir)\Dependencies\glew-2.1.0\include;$(ProjectDir)\Dependencies\glm;$(ProjectDir)\Dependencies\glfw-3.2.1.bin.WIN32\include;$(ProjectDir)\Dependencies\freetype\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(ProjectDir)\Dependencies\irrKlang-1.6.0\lib\Win32-visualStudio;$(ProjectDir)\Dependencies\freetype\win32;$(ProjectDir)\Dependencies\SDL2-2.0.8\VisualC\Win32\Debug;$(ProjectDir)\Dependencies\glfw-3.2.1.bin.WIN32\lib-vc2015;$(ProjectDir)\Dependencies\SOIL2\lib;$(ProjectDir)\Dependencies\Assimp\lib;$(ProjectDir)\Dependencies\glew-2.1.0\lib\Debug\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freetype.lib;opengl32.lib;SDL2main.lib;SDL2.lib;glew32d.lib;soil2-debug.lib;assimp-vc140-mt.lib;glfw3.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Dependencies\irrKlang-1.6.0\lib\Win32-visualStudio;$(ProjectDir)\Dependencies\SDL2-2.0.8\VisualC\Win32\Debug;$(ProjectDir)\Dependencies\glfw-3.2.1.bin.WIN32\lib-vc2015;$(ProjectDir)\Dependencies\SOIL2\lib;$(ProjectDir)\Dependencies\Assimp\lib;$(ProjectDir)\Dependencies\glew-2.1.0\lib\Debug\Win32;$(ProjectDir)\Dependencies\freetype\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;SDL2main.lib;SDL2.lib;freetype.lib;glew32d.lib;soil2-debug.lib;assimp-vc140-mt.lib;glfw3.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
