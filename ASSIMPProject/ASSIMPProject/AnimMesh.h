@@ -14,6 +14,7 @@
 #include "assimp\Importer.hpp"
 
 
+
 using namespace std;
 typedef unsigned int uint;
 #define NUM_BONES_PER_VEREX 4

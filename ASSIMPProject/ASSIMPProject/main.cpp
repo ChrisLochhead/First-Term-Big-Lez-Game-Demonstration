@@ -15,7 +15,6 @@
 #include "Shader.h"
 #include "SkyBox.h"
 #include "Camera.h"
-#include "libpng16\png.h"
 #include "PNGProcessor.h"
 #include "UI.h"
 
