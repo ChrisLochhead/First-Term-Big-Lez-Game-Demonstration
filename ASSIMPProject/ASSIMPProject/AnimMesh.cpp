@@ -15,11 +15,10 @@ AnimMesh::AnimMesh(vector<AnimVertex> vertic, vector<GLuint> ind, vector<AnimTex
 
 AnimMesh::~AnimMesh()
 {
-	//cout << "									 Mesh::~Mesh() " << endl;
-	//glDeleteBuffers(1, &VBO_vertices);
-	//glDeleteBuffers(1, &VBO_bones);
-	//glDeleteBuffers(1, &EBO_indices);
-	//glDeleteVertexArrays(1, &VAO);
+	glDeleteBuffers(1, &VBO_vertices);
+	glDeleteBuffers(1, &VBO_bones);
+	glDeleteBuffers(1, &EBO_indices);
+	glDeleteVertexArrays(1, &VAO);
 }
 
 void VertexBoneData::addBoneData(uint bone_id, float weight)
@@ -58,14 +57,7 @@ void AnimMesh::Draw(GLuint shaders_program)
 		glBindTexture(GL_TEXTURE_2D, textures[i].id);
 		glUniform1i(glGetUniformLocation(shaders_program, ("material." + name + number).c_str()), i);
 
-		//cout << "added in shader : " << ("material." + name + number).c_str() << endl;
 	}
-
-	//glUniform1f(glGetUniformLocation(shaders_program, "material.shininess"), 32.0f);
-
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	//glLineWidth(2);
-	//Draw
 	glBindVertexArray(VAO);
 	glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
 	glBindVertexArray(0);

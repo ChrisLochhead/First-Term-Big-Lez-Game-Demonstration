@@ -23,8 +23,6 @@
     <ClCompile Include="AnimModel.cpp" />
     <ClCompile Include="Audio.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="rt3d.cpp" />
-    <ClCompile Include="rt3dObjLoader.cpp" />
     <ClCompile Include="SkyBox.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
@@ -36,8 +34,6 @@
     <ClInclude Include="Lights.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
-    <ClInclude Include="rt3d.h" />
-    <ClInclude Include="rt3dObjLoader.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SkyBox.h" />
     <ClInclude Include="UI.h" />

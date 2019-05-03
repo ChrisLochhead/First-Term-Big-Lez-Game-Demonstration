@@ -558,14 +558,9 @@ void AnimModel::boneTransform(double time_in_sec, vector<aiMatrix4x4>& transform
 
 
 	double time_in_ticks = time_in_sec * ticks_per_second;
-	//cout << time_in_sec << endl;
 
 	float animation_time;
 
-	/*if (lefthand == 0)
-	{
-		cout << "calling left hand" << endl;
-	}*/
 	animation_time = fmod(time_in_ticks, scene->mAnimations[0]->mDuration);
 
 	cout << "lefthandstatus = " << lefthand << endl;
@@ -599,7 +594,6 @@ glm::mat4 AnimModel::aiToGlm(aiMatrix4x4 ai_matr)
 
 aiQuaternion AnimModel::nlerp(aiQuaternion a, aiQuaternion b, float blend)
 {
-	//cout << a.w + a.x + a.y + a.z << endl;
 	a.Normalize();
 	b.Normalize();
 

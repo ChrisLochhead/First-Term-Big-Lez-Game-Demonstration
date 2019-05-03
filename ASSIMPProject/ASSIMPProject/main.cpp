@@ -17,10 +17,6 @@
 #include "Camera.h"
 #include "UI.h"
 
-//rt3d
-#include "rt3d.h"
-#include "rt3dObjLoader.h"
-
 // Include GLFW
 #include <GLFW/glfw3.h>
 
@@ -664,10 +660,10 @@ int main(int argc, char *argv[])
 			mStack.top() = glm::scale(mStack.top(), glm::vec3(0.2f, 0.2f, 0.2f));
 			mStack.top() = glm::translate(mStack.top(), glm::vec3(0.0f, 5.5f, 0.0f));
 			setModel(mStack.top(), shader->Program);
-			//ground->DrawDMesh(*shader);
-			//roofs->DrawDMesh(*shader);
-			//props->DrawDMesh(*shader);
-			//lamps->DrawDMesh(*shader);
+			ground->DrawDMesh(*shader);
+			roofs->DrawDMesh(*shader);
+			props->DrawDMesh(*shader);
+			lamps->DrawDMesh(*shader);
 			mStack.pop();
 
 			mStack.push(ModelMatrix);
@@ -978,18 +974,14 @@ void update()
 	if (keys[GLFW_KEY_H]) {
 		testervalue = 0.5;
 		Sassy.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(-1.0f, 0.0f, 0.0f));
-		//Weapon.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(-1.0f, 0.0f, 0.0f));
 	}
 	if (keys[GLFW_KEY_J]) {
 		testervalue = 0.5;
 		Sassy.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(1.0f, 0.0f, 0.0f));
-		//Weapon.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(1.0f, 0.0f, 0.0f));
 	}
 
 	light.direction[0]  =  0.5;
 	light.direction[1] = -10.0;
 	light.direction[2] = -0.68;
-
-	//cout << testervalue << endl;
 
 }
