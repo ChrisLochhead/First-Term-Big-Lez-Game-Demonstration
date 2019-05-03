@@ -9,7 +9,7 @@
 //Glew
 #include "GL/glew.h"
 //GLM
-#include "glm/glm/glm.hpp"
+#include "glm/glm.hpp"
 //Assimp
 #include "assimp\Importer.hpp"
 

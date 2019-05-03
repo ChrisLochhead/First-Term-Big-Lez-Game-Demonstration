@@ -9,7 +9,7 @@
 #include <string>
 #include <map>
 
-#include "glm/glm/gtc/quaternion.hpp"
+#include "glm/gtc/quaternion.hpp"
 
 //assimp
 #include "assimp\Importer.hpp"
