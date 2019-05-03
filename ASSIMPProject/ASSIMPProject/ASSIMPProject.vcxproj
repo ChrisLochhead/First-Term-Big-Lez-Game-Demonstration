@@ -21,7 +21,6 @@
   <ItemGroup>
     <ClCompile Include="AnimMesh.cpp" />
     <ClCompile Include="AnimModel.cpp" />
-    <ClCompile Include="Audio.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SkyBox.cpp" />
     <ClCompile Include="UI.cpp" />
@@ -29,7 +28,6 @@
   <ItemGroup>
     <ClInclude Include="AnimMesh.h" />
     <ClInclude Include="AnimModel.h" />
-    <ClInclude Include="Audio.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Lights.h" />
     <ClInclude Include="Mesh.h" />
@@ -103,7 +101,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)\Dependencies\irrKlang-1.6.0\lib\Win32-visualStudio;$(ProjectDir)\Dependencies\freetype\win32;$(ProjectDir)\Dependencies\SDL2-2.0.8\VisualC\Win32\Debug;$(ProjectDir)\Dependencies\glfw-3.2.1.bin.WIN32\lib-vc2015;$(ProjectDir)\Dependencies\SOIL2\lib;$(ProjectDir)\Dependencies\Assimp\lib;$(ProjectDir)\Dependencies\glew-2.1.0\lib\Debug\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freetype.lib;opengl32.lib;SDL2main.lib;SDL2.lib;glew32d.lib;soil2-debug.lib;assimp-vc140-mt.lib;glfw3.lib;irrKlang.lib;bass.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freetype.lib;opengl32.lib;SDL2main.lib;SDL2.lib;glew32d.lib;soil2-debug.lib;assimp-vc140-mt.lib;glfw3.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
