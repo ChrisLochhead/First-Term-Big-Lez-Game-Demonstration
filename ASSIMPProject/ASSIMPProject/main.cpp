@@ -15,7 +15,6 @@
 #include "Shader.h"
 #include "SkyBox.h"
 #include "Camera.h"
-#include "PNGProcessor.h"
 #include "UI.h"
 
 //rt3d
@@ -136,9 +135,9 @@ Model *bullet;
 
 
 //animated models
-AnimModel Leslie;
+//AnimModel Leslie;
 AnimModel Sassy;
-AnimModel Weapon;
+//AnimModel Weapon;
 //AnimModel Choomah;
 
 //buffer and shader values
@@ -364,23 +363,23 @@ void initModels()
 
 	lamps = new Model("res/Props/Map/lamps.obj");
 
-	gun = new Model("res/Props/Gun/gun2.obj");
+	gun = new Model("res/Props/Gun/gun.obj");
 
 	muzzleFlash = new Model("res/Props/Gun/muzzleFlash.obj");
 
 	bullet = new Model("res/Props/Gun/bullet.obj");
 
 
-	Leslie.loadModel("res/characters/lez.dae");
-	Leslie.initShaders(animShader->Program);
+	//Leslie.loadModel("res/characters/lez.dae");
+	//Leslie.initShaders(animShader->Program);
 
 	Sassy.loadModel("res/characters/sassy/sassy.dae");
 	Sassy.initShaders(animShader->Program);
 	Sassy.setAnim(0);
 
-	Weapon.loadModel("res/Props/Gun/gun.dae");
-	Weapon.initShaders(animShader->Program);
-	Weapon.setAnim(0);
+	//Weapon.loadModel("res/Props/Gun/gun.dae");
+	//Weapon.initShaders(animShader->Program);
+	//Weapon.setAnim(0);
 
 	//Choomah.loadModel("res/characters/choomah/Choomah.dae");
 	//Choomah.initShaders(animShader->Program);
@@ -701,7 +700,7 @@ int main(int argc, char *argv[])
 
 
 			Sassy.draw(animShader->Program, SassyAnim);
-			Weapon.draw(animShader->Program, SassyAnim);
+			//Weapon.draw(animShader->Program, SassyAnim);
 
 			mStack.push(ModelMatrix);
 			mStack.top() = glm::translate(mStack.top(), glm::vec3(0.0, 1.0, -5.0));
@@ -715,7 +714,7 @@ int main(int argc, char *argv[])
 			MVP = ProjectionMatrix * camera.GetViewMatrix() * mStack.top();
 			glUniformMatrix4fv(glGetUniformLocation(animShader->Program, "MVP"), 1, GL_FALSE, glm::value_ptr(MVP));
 
-			Leslie.draw(animShader->Program, LeslieAnim);
+			//Leslie.draw(animShader->Program, LeslieAnim);
 
 			mStack.pop();
 
@@ -890,7 +889,7 @@ void MouseCallback(GLFWwindow *window, double xPos, double yPos)
 		if (camera.getPitch() < 10.75 && camera.getPitch() > -89) {
 
 			GLfloat oY = -(yOffset * 0.125);
-			Leslie.rotate_head_xz *= glm::quat(cos(glm::radians(oY)), sin(glm::radians(oY)) * glm::vec3(0.0f, 0.0f, 1.0f));
+			//Leslie.rotate_head_xz *= glm::quat(cos(glm::radians(oY)), sin(glm::radians(oY)) * glm::vec3(0.0f, 0.0f, 1.0f));
 
 		}
 
@@ -940,11 +939,11 @@ void update()
 
 	if (keys[GLFW_KEY_2])
 	{
-		Leslie.setAnim(0);
+		//Leslie.setAnim(0);
 	}
 	if (keys[GLFW_KEY_3])
 	{
-		Leslie.setAnim(1);
+		//Leslie.setAnim(1);
 	}
 
 	// Camera controls
@@ -979,12 +978,12 @@ void update()
 	if (keys[GLFW_KEY_H]) {
 		testervalue = 0.5;
 		Sassy.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(-1.0f, 0.0f, 0.0f));
-		Weapon.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(-1.0f, 0.0f, 0.0f));
+		//Weapon.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(-1.0f, 0.0f, 0.0f));
 	}
 	if (keys[GLFW_KEY_J]) {
 		testervalue = 0.5;
 		Sassy.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(1.0f, 0.0f, 0.0f));
-		Weapon.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(1.0f, 0.0f, 0.0f));
+		//Weapon.rotate_head_xz *= glm::quat(cos(glm::radians(testervalue)), sin(glm::radians(testervalue)) * glm::vec3(1.0f, 0.0f, 0.0f));
 	}
 
 	light.direction[0]  =  0.5;
